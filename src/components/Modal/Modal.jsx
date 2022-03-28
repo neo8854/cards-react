@@ -6,20 +6,20 @@ import styles from "./Modal.module.scss";
 
 export const Modal = ({ product, onToggleModal }) => {
   const [nameInput, setNameInput] = useState("");
-  const [namberInput, setNamberInput] = useState("");
+  const [numberInput, setNumberInput] = useState("");
   const [nameTrick, setNameTrick] = useState(false);
-  const [namberDirty, setNamberDirty] = useState(false);
+  const [numberDirty, setNumberDirty] = useState(false);
   const [nameError, setNameError] = useState("This field in required");
-  const [namberError, setNamberError] = useState("This field in required");
+  const [numberError, setNumberError] = useState("This field in required");
   const [formValid, setFormValid] = useState(false);
 
   useEffect(() => {
-    if (nameError || namberError) {
+    if (nameError || numberError) {
       setFormValid(false);
     } else {
       setFormValid(true);
     }
-  }, [nameError, namberError]);
+  }, [nameError, numberError]);
 
   const nameHandler = (e) => {
     setNameInput(e.target.value);
@@ -31,15 +31,15 @@ export const Modal = ({ product, onToggleModal }) => {
     }
   };
 
-  const namberHandler = (e) => {
-    setNamberInput(e.target.value);
+  const numberHandler = (e) => {
+    setNumberInput(e.target.value);
     const regex = /[0-9]|\./;
     if (e.target.value.length < 12 || e.target.value.length > 12) {
-      setNamberError("Should contain 12 characters");
+      setNumberError("Should contain 12 characters");
     } else if (!regex.test(e.target.value)) {
-      setNamberError("Only numbers allowed");
+      setNumberError("Only numbers allowed");
     } else {
-      setNamberError("");
+      setNumberError("");
     }
   };
 
@@ -48,15 +48,15 @@ export const Modal = ({ product, onToggleModal }) => {
       case "name":
         setNameTrick(true);
         break;
-      case "namber":
-        setNamberDirty(true);
+      case "number":
+        setNumberDirty(true);
         break;
     }
   };
 
   const consoleData = (e) => {
     e.preventDefault();
-    const data = { nameInput, namberInput, id: Date.now().toString(), product };
+    const data = { nameInput, numberInput, id: Date.now().toString(), product };
     console.log(data);
   };
 
@@ -91,21 +91,17 @@ export const Modal = ({ product, onToggleModal }) => {
             />
           </div>
           <div className={styles.helpBlock}>
-            {namberDirty && namberError && <div>{namberError}</div>}
+            {numberDirty && numberError && <div>{numberError}</div>}
             <input
-              onChange={(e) => namberHandler(e)}
+              onChange={(e) => numberHandler(e)}
               onBlur={(e) => blurHandler(e)}
-              value={namberInput}
-              name="namber"
+              value={numberInput}
+              name="number"
               type="number"
               placeholder="Number"
             />
           </div>
-          <Button
-            disabled={!formValid}
-            type="submit"
-            onConsoleData={consoleData}
-          >
+          <Button disabled={!formValid} type="submit" onClick={consoleData}>
             ORDER
           </Button>
         </form>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react";
+import ReactDOM from "react-dom";
 import { Card } from "../UI/Card";
 import { Button } from "../UI/Button";
 import { Modal } from "../Modal/Modal";
@@ -12,8 +12,8 @@ export const Cards = () => {
   const [showCheapes, setShowCheapes] = useState(false);
 
   const toggleModal = () => {
-    setShowCheapes((showCheapes) => {
-      return (showCheapes = !showCheapes);
+    setShowCheapes((prevState) => {
+      return (prevState = !prevState);
     });
   };
 
@@ -45,12 +45,12 @@ export const Cards = () => {
       </div>
       <div className={styles.cardControls}>
         <Button onClick={toggleModal}>Buy cheapest</Button>
-        {showCheapes &&
-          ReactDOM.createPortal(
-            <Modal product={lowest} onToggleModal={toggleModal} />,
-            document.getElementById("modal")
-          )}
       </div>
+      {showCheapes &&
+        ReactDOM.createPortal(
+          <Modal product={lowest} onToggleModal={toggleModal} />,
+          document.getElementById("modal")
+        )}
     </div>
   );
 };

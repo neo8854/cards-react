@@ -1,69 +1,71 @@
-@import "/src/App.scss"
-// .card {
-//   width: 320px;
-//   padding: 32px;
-//   border-radius: 24px;
-//   background-color: #fff;
-//   margin-bottom: 40px;
+// @import "/src/App.scss"
 
-//   &Category {
-//     margin-bottom: 8px;
-//     font-size: 16px;
-//     line-height: 24px;
-//     letter-spacing: 0.04em;
-//     text-transform: uppercase;
-//     color: #000000;
-//     opacity: 0.5;
-//   }
+.card {
+  width: 320px;
+  padding: 32px;
+  border-radius: 24px;
+  background-color: #fff;
+  margin-bottom: 40px;
 
-//   &Title {
-//     margin: 0;
-//     padding: 0;
-//     font-size: 40px;
-//     line-height: 48px;
-//     letter-spacing: -0.02em;
-//     margin-bottom: 40px;
-//     text-transform: capitalize;
-//   }
+  &Category {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.5;
+  }
 
-//   &PriceBox {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
+  &Title {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+  }
 
-//   &Price {
-//     span {
-//       vertical-align: 20px;
-//       font-size: 30px;
-//       line-height: 35px;
-//       letter-spacing: -0.02em;
-//       margin-right: 4px;
-//     }
-//     display: inline-block;
-//     margin: 0;
-//     padding: 0;
-//     font-size: 60px;
-//     line-height: 72px;
-//     letter-spacing: -0.02em;
-//   }
+  &PriceBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-//   &Btn {
-//     display: inline-block;
-//     width: 64px;
-//     height: 56px;
-//     color: #4bcfa0;
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 24px;
-//     background: #fff;
-//     border: 1px solid grey;
-//     border-radius: 16px;
-//     text-transform: uppercase;
+  &Price {
+    span {
+      vertical-align: 20px;
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: -0.02em;
+      margin-right: 4px;
+    }
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+  }
 
-//     &:hover {
-//       background: #4bcfa0;
-//       color: #fff;
-//     }
-//   }
-// }
+  &Btn {
+    display: inline-block;
+    width: 64px;
+    height: 56px;
+    color: #4bcfa0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    background: #fff;
+    border: 1px solid grey;
+    border-radius: 16px;
+    text-transform: uppercase;
+
+    &:hover {
+      background: #4bcfa0;
+      color: #fff;
+    }
+  }
+}
+

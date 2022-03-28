@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-export const Button = ({ children, disabled, onConsoleData }) => {
+export const Button = ({ children, disabled, onConsoleData, onClick }) => {
   return (
     <button
       className={styles.uiBtn}
       disabled={disabled}
-      onClick={onConsoleData}
+      onClick={onClick}
+      onChange={onConsoleData}
     >
       {children}
     </button>

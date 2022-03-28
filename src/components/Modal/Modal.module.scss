@@ -18,10 +18,13 @@
 }
 
 .close {
+  width: 40px;
+  height: 40px;
   border-radius: 50px;
   padding: 2px 6px;
-  background-color: #fff;
-  border: 1px solid teal;
+  background-color: #F2F2F2;
+  border: 1px white;
+
 }
 
 .card {
@@ -95,4 +98,5 @@
   opacity: 1;
   color: #ed0e2f;
 }
+
 
