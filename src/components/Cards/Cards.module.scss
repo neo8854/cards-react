@@ -1,0 +1,11 @@
+.cardWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.cardControls {
+  margin-top: 70px;
+}
