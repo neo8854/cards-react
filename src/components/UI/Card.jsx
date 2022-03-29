@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import styles from "./Card.module.scss";
 import { Modal } from "../Modal/Modal";
-import { Button } from "./Button";
 
 export const Card = ({ product }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +21,9 @@ export const Card = ({ product }) => {
           <span>$</span>
           {product.price}
         </div>
-        <Button onClick={toggleModal}>Buy</Button>
+        <button onClick={toggleModal} className={styles.cardBtn}>
+          Buy
+        </button>
       </div>
       {isOpen &&
         ReactDOM.createPortal(
